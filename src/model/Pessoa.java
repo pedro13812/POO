@@ -7,6 +7,7 @@ public class Pessoa {
     private String email;
     private String telefone;
     private Endereco endereco;
+    private boolean dependentes;
 
     public Pessoa() {
     }
@@ -16,11 +17,27 @@ public class Pessoa {
         this.idade = idade;
         this.email = email;
         this.telefone = telefone;
+    }
+
+    public Pessoa(Long id, String nome, int idade, String email, String telefone, Endereco endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.email = email;
+        this.telefone = telefone;
         this.endereco = endereco;
     }
 
-    public Pessoa(Long id, String nome, int idade, String email, String telefone) {
+    public boolean hasDependetes() {
+        return dependentes;
+    }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setDependentes(boolean dependentes) {
+        this.dependentes = dependentes;
     }
 
     public String getNome() {
